@@ -1,0 +1,99 @@
+{
+  "model_configs": {
+    "default": {
+      "max_new_tokens": 256,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "do_sample": true,
+      "repetition_penalty": 1.1
+    },
+    "creative": {
+      "max_new_tokens": 512,
+      "temperature": 0.9,
+      "top_p": 0.95,
+      "do_sample": true,
+      "repetition_penalty": 1.05
+    },
+    "precise": {
+      "max_new_tokens": 128,
+      "temperature": 0.1,
+      "top_p": 0.8,
+      "do_sample": true,
+      "repetition_penalty": 1.2
+    }
+  },
+  
+  "evaluation_settings": {
+    "qa_accuracy": {
+      "similarity_threshold": 0.7,
+      "max_samples": 100,
+      "timeout_seconds": 30
+    },
+    "quality_metrics": {
+      "coherence_weight": 0.25,
+      "relevance_weight": 0.25,
+      "completeness_weight": 0.25,
+      "fluency_weight": 0.25
+    },
+    "benchmark": {
+      "num_samples": 100,
+      "include_warmup": true,
+      "warmup_samples": 5
+    }
+  },
+  
+  "test_prompts": {
+    "general": [
+      "What is artificial intelligence?",
+      "Explain machine learning in simple terms.",
+      "How do neural networks work?",
+      "What are the benefits of renewable energy?",
+      "Describe the process of photosynthesis."
+    ],
+    "reasoning": [
+      "If a train leaves station A at 2 PM traveling at 60 mph, and another train leaves station B at 3 PM traveling at 80 mph, when will they meet if the stations are 280 miles apart?",
+      "A farmer has 17 sheep. All but 9 die. How many sheep does the farmer have left?",
+      "What comes next in this sequence: 2, 4, 8, 16, ?",
+      "If you have a 3-gallon jug and a 5-gallon jug, how can you measure exactly 4 gallons?",
+      "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?"
+    ],
+    "knowledge": [
+      "Who was the first person to walk on the moon?",
+      "What is the capital of Australia?",
+      "When did World War II end?",
+      "What is the chemical formula for water?",
+      "Who wrote the novel '1984'?"
+    ],
+    "creative": [
+      "Write a short story about a robot who learns to paint.",
+      "Compose a haiku about autumn leaves.",
+      "Describe a day in the life of a cloud.",
+      "Create a dialogue between a cat and a dog discussing their favorite foods.",
+      "Invent a new holiday and explain how it would be celebrated."
+    ]
+  },
+  
+  "output_formats": {
+    "report": {
+      "include_plots": true,
+      "detailed_results": true,
+      "summary_only": false
+    },
+    "json": {
+      "pretty_print": true,
+      "include_metadata": true
+    },
+    "csv": {
+      "include_headers": true,
+      "delimiter": ","
+    }
+  },
+  
+  "visualization": {
+    "style": "seaborn-v0_8",
+    "figure_size": [15, 12],
+    "dpi": 300,
+    "save_format": "png",
+    "color_palette": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
+  }
+}
