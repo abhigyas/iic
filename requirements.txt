@@ -1,0 +1,25 @@
+# Core dependencies - install first
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Transformers and related
+transformers>=4.30.0
+accelerate>=0.20.0
+safetensors>=0.3.0
+huggingface-hub>=0.15.0
+
+# Quantization libraries (install after PyTorch)
+bitsandbytes>=0.39.0
+
+# Optional quantization methods
+# auto-gptq>=0.7.0  # Uncomment if needed
+# llama-cpp-python>=0.2.0  # Uncomment if needed
+
+# API dependencies
+flask>=2.3.0
+flask-cors>=4.0.0
+
+# Utilities
+numpy>=1.24.0
+tqdm>=4.65.0

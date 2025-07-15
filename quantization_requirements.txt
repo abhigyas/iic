@@ -1,0 +1,9 @@
+# Requirements for model quantization
+torch>=2.0.0
+transformers>=4.30.0
+accelerate>=0.20.0
+bitsandbytes>=0.39.0
+auto-gptq>=0.7.0
+llama-cpp-python>=0.2.0
+safetensors>=0.3.0
+huggingface-hub>=0.15.0
